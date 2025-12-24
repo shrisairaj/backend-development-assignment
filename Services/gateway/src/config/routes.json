@@ -14,5 +14,9 @@
   "/projects": {
     "target": "http://localhost:4002",
     "methods": ["GET"]
-  }
+  },
+  "/health-check": {
+  "target": "http://localhost:4001",
+  "methods": ["GET"]
+}
 }

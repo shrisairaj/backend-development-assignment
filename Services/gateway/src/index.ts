@@ -10,8 +10,15 @@ const PORT = 3000;
 
 app.use(express.json());
 
-app.get("/health", (req, res) => {
-  res.json({ status: "API Gateway running" });
+// app.get("/health", (req, res) => {
+//   res.json({ status: "API Gateway running" });
+// });
+app.get("/", (_req, res) => {
+  res.json({
+    service: "api-gateway",
+    status: "running",
+    version: "1.0.0",
+  });
 });
 
 // Auth
